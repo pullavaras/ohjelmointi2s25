@@ -6,7 +6,7 @@ auto1.kiihdytä(30)
 auto1.kiihdytä(70)
 auto1.kiihdytä(50)
 
-print(f"""
+print(f""" 
 Rekisteritunnus: {auto1.rekisteristeritunnus}
 Huippunopeus: {auto1.huippunopeus}
 Nopeus: {auto1.nopeus_nyt}
