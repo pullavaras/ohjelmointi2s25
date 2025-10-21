@@ -12,4 +12,4 @@ Nopeus: {auto1.nopeus_nyt}
 Matka: {auto1.kuljettu_matka}
       """)
 
-#
+
