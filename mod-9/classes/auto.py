@@ -18,3 +18,4 @@ class Auto:
         pass
         # laske kuinka palon auto on kulkenut annetussa ajassa tietyllänopeudella
         # lisää kuljettu matka kokonaismatkaan
+#
