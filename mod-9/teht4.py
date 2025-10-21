@@ -17,4 +17,4 @@ while kokonaismatka < 10000:
     # toinen silmukka, jossa käydään autot läpi
         # haetaan matkan arvo, jos yli 10000, lopeta kisa asettamalla auton matka kokonaismatkaksi
 
-# etsi joku taulukkokirja tulostamiseen
+# etsi joku taulukkokirja tulostamiseen#
