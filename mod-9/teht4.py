@@ -1,20 +1,20 @@
 from classes.auto import Auto
+import random
 
 autot = []
 
-for i in range (1, 11):
-    # arvo huippunopeus 100-200
-    huippunopeus = 0
-    autot.append(Auto("ABC" + str(i), huippunopeus))
+for a in range(1,11):
+    huippunopeus = random.randint(100, 200)
+    autot.append(Auto("ABC-" +str(a), huippunopeus))
 
 kokonaismatka = 0
 while kokonaismatka < 10000:
     for auto in autot:
-        #arvo nopeuden muutos 10 - 15
-        # kutsu kiihdytä
+        auton_nopeus = random.randint(-10, 15)
+        auto.kiihdytä(auton_nopeus)
         auto.kulje(1)
+        if auto.matka > kokonaismatka:
+            kokonaismatka = auto.matka
 
-    # toinen silmukka, jossa käydään autot läpi
-        # haetaan matkan arvo, jos yli 10000, lopeta kisa asettamalla auton matka kokonaismatkaksi
-
-# etsi joku taulukkokirja tulostamiseen
+for auto in autot:
+    print(f"{auto.rekisteritunnus:<8} {auto.huippunopeus:>8} {auto.nopeus:>8} {auto.matka:>10}")

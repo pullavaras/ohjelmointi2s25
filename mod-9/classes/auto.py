@@ -14,10 +14,8 @@ class Auto:
             self.nopeus = 0
         return
 
-        
-        # lisää muutos self nopeuteen
-        # tarkasta ettei nopeus ole yli huippunopeuden
-        # jos on, aseta nopeus = huippunopeus
-        # tarkasta ettei nopeus ole alle nolla
-        # jos on, aseta nopeus = 0
-
+    def kulje(self, tunnit):
+        #self.matka = 2000
+        #self.nopeus = 60
+        self.matka = self.matka + self.nopeus * tunnit
+        return
