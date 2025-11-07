@@ -3,11 +3,23 @@ class Hissi:
     def __init__(self, alin_kerros, ylin_kerros):
         self.alin_kerros = alin_kerros
         self.ylin_kerros = ylin_kerros
-    
-    def siirry_kerrokseen(self):
-        
+        self.nykyinen_kerros = alin_kerros
+
     def kerros_ylös(self):
-        pass
+        self.nykyinen_kerros += 1
+        print(f"Hissi on nyt {self.nykyinen_kerros} kerroksessa.")
         
     def kerros_alas(self):
-        pass
+        self.nykyinen_kerros -= 1
+        print(f"Hissi on nyt {self.nykyinen_kerros} kerroksessa.")
+
+    def siirry_kerrokseen(self, kerrokseen):
+        while self.nykyinen_kerros < kerrokseen:
+            self.kerros_ylös()
+        while self.nykyinen_kerros > kerrokseen:
+            self.kerros_alas()
+        if kerrokseen < self.alin_kerros or kerrokseen > self.ylin_kerros:
+            print("Väärä kerros.")
+            return
+
+
