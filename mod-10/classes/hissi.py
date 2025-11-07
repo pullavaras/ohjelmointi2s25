@@ -7,5 +7,7 @@ class Hissi:
     def siirry_kerrokseen(self):
         
     def kerros_ylös(self):
+        pass
         
     def kerros_alas(self):
+        pass
