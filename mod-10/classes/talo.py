@@ -17,3 +17,7 @@ class Talo:
         hissi = self.hissit[hissi_nro]
         hissi.siirry_kerrokseen(kerros)
 
+    def palohälytys(self):
+        print("Talossa on palohälytys. Kaikki hissit siirtyvät pohjakerrokseen.")
+        for hissi in self.hissit:
+            hissi.siirry_kerrokseen(self.alin_kerros)
