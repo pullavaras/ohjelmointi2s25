@@ -14,12 +14,13 @@ class Hissi:
         print(f"Hissi on nyt {self.nykyinen_kerros} kerroksessa.")
 
     def siirry_kerrokseen(self, kerrokseen):
+        if kerrokseen < self.alin_kerros or kerrokseen > self.ylin_kerros:
+            print("Virheellinen kerros.")
+            return
         while self.nykyinen_kerros < kerrokseen:
             self.kerros_ylös()
         while self.nykyinen_kerros > kerrokseen:
             self.kerros_alas()
-        if kerrokseen < self.alin_kerros or kerrokseen > self.ylin_kerros:
-            print("Väärä kerros.")
-            return
+
 
 
