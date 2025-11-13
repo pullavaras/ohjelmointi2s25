@@ -4,7 +4,7 @@ class Julkaisu:
         self.nimi = nimi
 
     def tulosta_tiedot(self):
-        print(f"Julkaisun: {self.nimi}")
+        print(f"Julkaisu: {self.nimi}")
 
 class Kirja(Julkaisu):
 
@@ -28,7 +28,7 @@ class Lehti(Julkaisu):
         super().tulosta_tiedot()
         print(f"Päätoimittaja on {self.päätoimittaja}.")
 
-kirja = Kirja("Hytti numero 6", "Rosa Liksom", 200)
+kirja = Kirja("Hytti n:o 6", "Rosa Liksom", 200)
 lehti = Lehti("Aku Ankka", "Aki Hyyppä")
 
 kirja.tulosta_tiedot()
