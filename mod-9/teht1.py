@@ -1,10 +1,10 @@
 from classes.auto import Auto
 
-auto = Auto("ABC-123", 142)
+auto1 = Auto("ABC-123", 142)
 
 print(f"""
-Auton rekisteritunnus on {auto.rekisteritunnus}
-Auton huippunopeus on {auto.huippunopeus}
-Auton tämänhetkinen nopeus: {auto.nopeus}
-Autolla kuljettu matka: {auto.matka}
-""")
+    Rekisteritunnus: {auto1.rekisteritunnus}
+    Huippunopeus: {auto1.huippunopeus}
+    Tämänhetkinen nopeus: {auto1.nopeus}
+    Kuljettu matka: {auto1.matka}
+    """)

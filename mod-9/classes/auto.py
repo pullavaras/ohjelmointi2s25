@@ -5,17 +5,15 @@ class Auto:
         self.huippunopeus = huippunopeus
         self.nopeus = 0
         self.matka = 0
-    
-    def kiihdytä(self, muutos):
-        self.nopeus = self.nopeus + muutos
-        if self.nopeus >= self.huippunopeus:
+
+    def kiihdytä(self, kmh):
+        self.nopeus += kmh
+        if self.nopeus > self.huippunopeus:
             self.nopeus = self.huippunopeus
-        elif self.nopeus < 0:
+        if self.nopeus < 0:
             self.nopeus = 0
-        return
 
     def kulje(self, tunnit):
-        #self.matka = 2000
-        #self.nopeus = 60
-        self.matka = self.matka + self.nopeus * tunnit
-        return
+        kuljettu = self.nopeus * tunnit
+        self.matka += kuljettu
+
