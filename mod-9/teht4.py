@@ -22,8 +22,16 @@ class Auto:
 
 autot = []
 
-for a in range(10):
-    autot.append("ABC-"+str(a+1))
-print(autot)
+for a in range(1, 11):
+    rekisteritunnus = "ABC-" + str(a)
+    huippunopeus = random.randint(100, 200)
 
-huippunopeus = random.randint(100, 200)
+    auto = Auto(rekisteritunnus, huippunopeus)
+    autot.append(auto)
+
+while True:
+    noupeuden_muutos = random.randint(-10, 15)
+    auto.kiihdytä(noupeuden_muutos)
+
+    for auto in autot:
+        auto.kulje(1)
