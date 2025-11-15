@@ -39,10 +39,11 @@ while autokilpailu:
         if auto.matka >= 1000:
             autokilpailu = False
 
-print(f"{'Rekisteri':<10} {'Huippunopeus':<14} {'Nopeus':<8} {'Matka':<10}")
+print(f"{'Rekisteritunnus':<10} {'Huippunopeus':<14} {'Nopeus':<8} {'Kuljettu matka':<10}")
+
 
 for auto in autot:
-    print(f"{auto.rekisteritunnus:<10} "
-          f"{auto.huippunopeus:<14} "
-          f"{auto.nopeus:<8} "
-          f"{auto.matka:<10}")
+    print(f"{auto.rekisteritunnus:>10}"
+          f"{auto.huippunopeus:>12}"
+          f"{auto.nopeus:>14}"
+          f"{auto.matka:>10}")
