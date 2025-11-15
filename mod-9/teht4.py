@@ -1,5 +1,6 @@
 import random
 
+
 class Auto:
 
     def __init__(self, rekisteritunnus, huippunopeus):
@@ -19,7 +20,6 @@ class Auto:
         kuljettu = self.nopeus * tunnit
         self.matka += kuljettu
 
-
 autot = []
 
 for a in range(1, 11):
@@ -29,9 +29,20 @@ for a in range(1, 11):
     auto = Auto(rekisteritunnus, huippunopeus)
     autot.append(auto)
 
-while True:
-    noupeuden_muutos = random.randint(-10, 15)
-    auto.kiihdytä(noupeuden_muutos)
-
+autokilpailu = True
+while autokilpailu:
     for auto in autot:
+        noupeuden_muutos = random.randint(-10, 15)
+        auto.kiihdytä(noupeuden_muutos)
         auto.kulje(1)
+    for auto in autot:
+        if auto.matka >= 1000:
+            autokilpailu = False
+
+print(f"{'Rekisteri':<10} {'Huippunopeus':<14} {'Nopeus':<8} {'Matka':<10}")
+
+for auto in autot:
+    print(f"{auto.rekisteritunnus:<10} "
+          f"{auto.huippunopeus:<14} "
+          f"{auto.nopeus:<8} "
+          f"{auto.matka:<10}")
